@@ -1,0 +1,346 @@
+<mxfile host="app.diagrams.net" agent="GitHub Copilot" version="26.0.0">
+  <diagram name="Three-Tier Media Architecture" id="three-tier-media-arch">
+    <mxGraphModel dx="1422" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Three-Tier Media Delivery Architecture" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="420" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== PRESENTATION TIER ===== -->
+        <mxCell id="tier1-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#CCCCCC;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="30" y="80" width="300" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="tier1-label" value="Presentation Tier" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=1;fontColor=#1A73E8;" vertex="1" parent="1">
+          <mxGeometry x="105" y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Mobile Phone -->
+        <mxCell id="phone" value="Mobile App" style="shape=mxgraph.ios7.misc.smartphone;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="70" y="140" width="80" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Desktop/Computer -->
+        <mxCell id="computer" value="Web Browser" style="shape=mxgraph.cisco.computers_and_peripherals.pc;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="100" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- End Users label -->
+        <mxCell id="users-label" value="End Users" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontStyle=2;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="120" y="280" width="80" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- DNS -->
+        <mxCell id="dns" value="DNS" style="shape=mxgraph.aws3.route_53;whiteSpace=wrap;html=1;fillColor=#E6522C;strokeColor=none;fontColor=#FFFFFF;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="320" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== CDN LAYER ===== -->
+        <mxCell id="cdn-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFB300;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="380" y="80" width="200" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="cdn-label" value="CDN Layer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=1;fontColor=#F57C00;" vertex="1" parent="1">
+          <mxGeometry x="430" y="90" width="90" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- CDN Node 1 -->
+        <mxCell id="cdn1" value="CDN Edge&#xa;(Americas)" style="shape=mxgraph.aws3.cloudfront;whiteSpace=wrap;html=1;fillColor=#F58536;strokeColor=none;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="130" width="70" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- CDN Node 2 -->
+        <mxCell id="cdn2" value="CDN Edge&#xa;(Europe/Asia)" style="shape=mxgraph.aws3.cloudfront;whiteSpace=wrap;html=1;fillColor=#F58536;strokeColor=none;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="130" width="70" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cdn-desc" value="Caches &amp; delivers&#xa;images/videos globally" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontStyle=2;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="400" y="210" width="130" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== APPLICATION TIER ===== -->
+        <mxCell id="tier2-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#66BB6A;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="380" y="290" width="340" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="tier2-label" value="Application Tier" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=1;fontColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="470" y="300" width="130" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Load Balancer -->
+        <mxCell id="lb" value="Load Balancer" style="shape=mxgraph.aws3.elastic_load_balancing;whiteSpace=wrap;html=1;fillColor=#F58536;strokeColor=none;fontColor=#FFFFFF;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="510" y="340" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- API Server 1 -->
+        <mxCell id="api1" value="API Server 1" style="shape=mxgraph.aws3.ec2;whiteSpace=wrap;html=1;fillColor=#F58536;strokeColor=none;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="430" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- API Server 2 -->
+        <mxCell id="api2" value="API Server 2" style="shape=mxgraph.aws3.ec2;whiteSpace=wrap;html=1;fillColor=#F58536;strokeColor=none;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="510" y="430" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- API Server 3 -->
+        <mxCell id="api3" value="API Server 3" style="shape=mxgraph.aws3.ec2;whiteSpace=wrap;html=1;fillColor=#F58536;strokeColor=none;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="620" y="430" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Search/Media Service -->
+        <mxCell id="media-svc" value="Media Search&#xa;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#43A047;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="530" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Transcoding -->
+        <mxCell id="transcode" value="Transcoding&#xa;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#43A047;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ===== CACHE LAYER (Redis) ===== -->
+        <mxCell id="cache-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#E53935;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="780" y="290" width="200" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="cache-label" value="Cache Layer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=1;fontColor=#C62828;" vertex="1" parent="1">
+          <mxGeometry x="830" y="300" width="100" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Redis Primary -->
+        <mxCell id="redis1" value="Redis Primary" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#D32F2F;strokeColor=none;fontColor=#FFFFFF;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="800" y="350" width="80" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Redis Replica -->
+        <mxCell id="redis2" value="Redis Replica" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#E57373;strokeColor=none;fontColor=#FFFFFF;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="890" y="350" width="80" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="redis-desc" value="Caches search results,&#xa;user sessions, metadata" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontStyle=2;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="805" y="425" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== DATA TIER ===== -->
+        <mxCell id="tier3-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#42A5F5;dashed=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="780" y="500" width="350" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="tier3-label" value="Data Tier" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=1;fontColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="910" y="510" width="80" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Primary Database -->
+        <mxCell id="db" value="Primary DB&#xa;(PostgreSQL)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#1565C0;strokeColor=none;fontColor=#FFFFFF;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="800" y="560" width="100" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Object Storage -->
+        <mxCell id="storage" value="Object Storage&#xa;(S3 / Blob)" style="shape=mxgraph.aws3.s3;whiteSpace=wrap;html=1;fillColor=#1B660F;strokeColor=none;fontColor=#FFFFFF;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="940" y="555" width="70" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- Read Replica -->
+        <mxCell id="db-replica" value="Read Replica" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#64B5F6;strokeColor=none;fontColor=#FFFFFF;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="800" y="670" width="100" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Media Files label -->
+        <mxCell id="media-label" value="Images, Videos,&#xa;Thumbnails" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontStyle=2;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="930" y="650" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== CONNECTIONS ===== -->
+
+        <!-- Users to CDN -->
+        <mxCell id="edge-phone-cdn" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F57C00;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="phone" target="cdn1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-computer-cdn" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F57C00;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="computer" target="cdn2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Users to Load Balancer (API requests) -->
+        <mxCell id="edge-phone-lb" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2E7D32;strokeWidth=2;endArrow=block;endFill=1;dashed=1;" edge="1" parent="1" source="phone" target="lb">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="380" />
+              <mxPoint x="540" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-phone-lb-label" value="API Requests" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontColor=#2E7D32;" vertex="1" connectable="0" parent="edge-phone-lb">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge-computer-lb" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2E7D32;strokeWidth=2;endArrow=block;endFill=1;dashed=1;" edge="1" parent="1" source="computer" target="lb">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="400" />
+              <mxPoint x="540" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- CDN media delivery label -->
+        <mxCell id="cdn-delivery-label" value="Media Delivery&#xa;(Images/Videos)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontColor=#F57C00;" vertex="1" connectable="0" parent="edge-phone-cdn">
+          <mxGeometry x="0.2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- LB to API Servers -->
+        <mxCell id="edge-lb-api1" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="lb" target="api1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-lb-api2" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="lb" target="api2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-lb-api3" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="lb" target="api3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- API to Media Service -->
+        <mxCell id="edge-api2-media" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2E7D32;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="api2" target="media-svc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- API to Transcode -->
+        <mxCell id="edge-api3-transcode" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2E7D32;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="api3" target="transcode">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Media Service to Redis (search cache) -->
+        <mxCell id="edge-media-redis" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#C62828;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="media-svc" target="redis1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="500" />
+              <mxPoint x="760" y="500" />
+              <mxPoint x="760" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-media-redis-label" value="Search cache&#xa;lookup / store" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontColor=#C62828;" vertex="1" connectable="0" parent="edge-media-redis">
+          <mxGeometry x="-0.2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Redis replication -->
+        <mxCell id="edge-redis-repl" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E57373;strokeWidth=1;endArrow=block;endFill=1;dashed=1;" edge="1" parent="1" source="redis1" target="redis2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Media Service to DB -->
+        <mxCell id="edge-media-db" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565C0;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="media-svc" target="db">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="600" />
+              <mxPoint x="850" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-media-db-label" value="Metadata queries" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontColor=#1565C0;" vertex="1" connectable="0" parent="edge-media-db">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Transcode to Object Storage -->
+        <mxCell id="edge-transcode-storage" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1B660F;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="transcode" target="storage">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="600" />
+              <mxPoint x="660" y="598" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-transcode-storage-label" value="Store/retrieve&#xa;media files" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontColor=#1B660F;" vertex="1" connectable="0" parent="edge-transcode-storage">
+          <mxGeometry x="-0.2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- CDN origin pull from Object Storage -->
+        <mxCell id="edge-cdn-storage" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F57C00;strokeWidth=2;endArrow=block;endFill=1;dashed=1;" edge="1" parent="1" source="cdn2" target="storage">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="165" />
+              <mxPoint x="1100" y="165" />
+              <mxPoint x="1100" y="598" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-cdn-storage-label" value="Origin pull&#xa;(cache miss)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontColor=#F57C00;" vertex="1" connectable="0" parent="edge-cdn-storage">
+          <mxGeometry x="-0.5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- DB replication -->
+        <mxCell id="edge-db-repl" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64B5F6;strokeWidth=1;endArrow=block;endFill=1;dashed=1;" edge="1" parent="1" source="db" target="db-replica">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#E0E0E0;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="30" y="460" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="Legend" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="465" width="60" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="leg1" value="" style="endArrow=block;html=1;strokeColor=#F57C00;strokeWidth=2;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="510" as="sourcePoint" />
+            <mxPoint x="120" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg1-label" value="Media delivery (CDN)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="497" width="130" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="leg2" value="" style="endArrow=block;html=1;strokeColor=#2E7D32;strokeWidth=2;endFill=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="540" as="sourcePoint" />
+            <mxPoint x="120" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg2-label" value="API requests" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="527" width="80" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="leg3" value="" style="endArrow=block;html=1;strokeColor=#C62828;strokeWidth=2;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="570" as="sourcePoint" />
+            <mxPoint x="120" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg3-label" value="Redis cache ops" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="557" width="100" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="leg4" value="" style="endArrow=block;html=1;strokeColor=#1565C0;strokeWidth=2;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="600" as="sourcePoint" />
+            <mxPoint x="120" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg4-label" value="Database queries" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="587" width="110" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="leg5" value="" style="endArrow=block;html=1;strokeColor=#1B660F;strokeWidth=2;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="630" as="sourcePoint" />
+            <mxPoint x="120" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg5-label" value="Object storage I/O" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="617" width="120" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
